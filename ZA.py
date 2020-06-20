@@ -1,5 +1,5 @@
 import re
-select = re.compile(r"^[a-zA-Z]+@[a-zA-Z]+\.(com)|(kz)$")
+select = re.compile(r"^[a-zA-Z]+@[a-zA-Z]+.[a-zA-Z]")
 
 while True:
      mail = input()
