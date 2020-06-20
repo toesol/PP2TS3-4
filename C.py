@@ -1,15 +1,7 @@
-from math import *
+l,r=map(int,input().split())
 
-def bad_number(l,r):
-    str1=""
-    for one in range(l,r+1):
-        res=one%7
-        if(res==1 or res==2 or res==5 ):
-            str1=str1+str(one)+" "
-    print(str1)
-
-if __name__ == '__main__':
-     l, r = map(int, input().split())
-
-
-    bad_number(int(l),int(r))
+for x in range(l,r+1):
+    a = x%7
+    if a==1 or a==2 or a==5:
+        
+        print(x,end=' ')
