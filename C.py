@@ -9,7 +9,6 @@ def bad_number(l,r):
     print(str1)
 
 if __name__ == '__main__':
-    l = input()
-    r = input()
+     l,r = map(lambda x:int(x),input().split())
 
     bad_number(int(l),int(r))
