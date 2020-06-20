@@ -1,13 +1,18 @@
-number = input()
-a = number % 10
-b = number // 10 % 10
-c = number // 100 % 10
-d = number // 1000
+import re
 
-def esf(e):
-for e in range(number):
-    e = a + b + c + d
-if e%4 == 0:
-    print "Yes" 
-else:
-    print "No" 
+select = re.compile(r"\d")
+while True:
+    sum = 0
+    number = input()
+    if number.isdigit():
+        num_lst = select.findall(number)
+        if num_lst:
+            for num in num_lst:
+                sum += int(num)
+    else:
+        print()
+    if sum % 4 == 0 and sum != 0:
+        print("Yes")
+    else:
+        print("No")
+
