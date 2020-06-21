@@ -1,18 +1,16 @@
-import re
+def func(num):
+    if num < 10:
+        return num
+    else:
+        return func(num // 10) + func(num % 10)
 
-select = re.compile(r"\d")
-while True:
-    sum = 0
-    number = input()
-    if number.isdigit():
-        num_lst = select.findall(number)
-        if num_lst:
-            for num in num_lst:
-                sum += int(num)
-    else:
-        print()
-    if sum % 4 == 0 and sum != 0:
-        print("Yes")
-    else:
-        print("No")
+
+num = int(input())
+c = num%10
+res = func(num)
+if res%c == 0:
+    print("Yes")
+else:
+    print("No")
+
 
