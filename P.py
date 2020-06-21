@@ -1,9 +1,11 @@
 a,b,c,d,e,f=map(int,input().split())
 
-if abs(a)+abs(b) < abs(e) and abs(c)+abs(d) < abs(f):
-    print('no')
+if a <= e and e <= c and d <= f and f <= b:
+    print("yes")
 else:
-    print('yes')
+    print("no")
+
+
 
 
 
